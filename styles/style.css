@@ -101,8 +101,26 @@ main >section{
   font-size: 16px;
   word-spacing: 2px;
 }
+/* small device  */
 @media screen and (max-width:576px) {
-  .navbar ,  .nav-links{
+  .navbar ,
+  .nav-links ,
+  .team {
   flex-direction: column;
+  }
+  .teams-img-container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .our-features{
+    margin:0px 20px;
+  }
+}
+/* medium device */
+@media screen and (min-width:577px) , (max-width:992) {
+  .team{
+    flex-direction: column;
+  }
+  .our-features{
+    margin: 0 auto;
   }
 }
