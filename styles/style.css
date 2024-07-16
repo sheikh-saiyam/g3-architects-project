@@ -32,6 +32,13 @@ main{
 main >section{
   margin-top: 130px;
 }
+.section-title{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.flex{
+  display: flex;
+}
 /* header style */
 .navbar{
   display: flex;
@@ -86,10 +93,6 @@ main >section{
   margin-left: 100px;
   max-width: 530px;
 }
-.features-title{
-  font-size: 2.5rem;
-  font-weight: 700;
-}
 #span1{
   font-weight: 500;
 }
@@ -101,6 +104,49 @@ main >section{
   font-size: 16px;
   word-spacing: 2px;
 }
+/* some fact style */
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-top: 60px;
+}
+.fact-card{
+  border: 1px solid #FF900E;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.fact-no{
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0px 5px 0px ;
+}
+.fact-name{
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #727272;
+  margin-top: 10px;
+  
+}
+.fact-description{
+  max-width: 540px;
+}
+/* sponsor style */
+.sponsor-info{
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+.sponsor-company{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+}
+.sponsor-company img{
+  filter: grayscale(100%);
+}
 /* small device  */
 @media screen and (max-width:576px) {
   .navbar ,
@@ -108,19 +154,34 @@ main >section{
   .team {
   flex-direction: column;
   }
-  .teams-img-container{
-    grid-template-columns: repeat(1,1fr);
+  .teams-img-container ,
+  .facts-container ,
+  .sponsor-company{
+    grid-template-columns: 1fr;
+  }
+  .facts-container  {
+    justify-items: center;
+    gap: 24px;
+  }
+  .sponsor-company {
+    justify-items: center;
+    gap: 32px;
   }
   .our-features{
     margin:0px 20px;
   }
 }
 /* medium device */
-@media screen and (min-width:577px) , (max-width:992) {
+@media screen and (min-width:576px) and (max-width:992px) {
   .team{
     flex-direction: column;
   }
   .our-features{
     margin: 0 auto;
+  }
+  .sponsor-company{
+    grid-template-columns: repeat(2 ,1fr);
+    justify-items:center;
+    gap: 50px;
   }
 }
